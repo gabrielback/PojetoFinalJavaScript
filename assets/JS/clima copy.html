@@ -14,22 +14,40 @@
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${latitude},${longitude}.85&days=5&aqi=no&alerts=no`)
         .then(response => response.json()) 
         .then(data => {
-            console.log(data);
+            console.log("data > ",data);
+            
+            
+            console.log("data..current temperatura atual > ",data.current.temp_c);
+            console.log("data.location.name> ",data.location.name);
+            console.log("data.location.region> ",data.location.region);
+            console.log("data.location.country> ",data.location.country);
+            console.log("data.location.localtime> ",data.location.localtime);
+            
+            
+            console.log("data.forecast > ",data.forecast);
+            const forecastObj = data.forecast.forecastday
+
+            console.log(forecastObj)
+
+            forecastObj.foreac
+            
+            
+            
         })
         
 
         
         //location:
-        //Partes da API que vamos utilizar:
-        //{ 
-            //1- name;
-            //2- region;
-            //3- country;
-            //4- localtime;
-            //}
-            
-            //current:
-            //{
+            //Partes da API que vamos utilizar:
+            //{ 
+                //1- name;
+                //2- region;
+                //3- country;
+                //4- localtime;
+                //}
+                
+        //current:
+        //{
         //1- temp_c;
         //condition:
         //{
