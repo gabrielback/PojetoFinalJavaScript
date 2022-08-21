@@ -1,0 +1,17 @@
+.slide-bl{-webkit-animation:slide-bl .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-bl .5s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes slide-bl{0%{-webkit-transform:translateY(0) translateX(0);transform:translateY(0) translateX(0)}100%{-webkit-transform:translateY(100px) translateX(-100px);transform:translateY(100px) translateX(-100px)}}@keyframes slide-bl{0%{-webkit-transform:translateY(0) translateX(0);transform:translateY(0) translateX(0)}100%{-webkit-transform:translateY(100px) translateX(-100px);transform:translateY(100px) translateX(-100px)}}
+  
+
+body {
+    
+    background: linear-gradient(145deg, #9e9e9e, #bcbcbc);
+}
+
+form {
+    margin: 50px 300px 50px 300px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #969696,
+                 -20px -20px 60px #cacaca;
+}
