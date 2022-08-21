@@ -11,7 +11,7 @@
         const latitude = -26.30;
         const longitude = -48.85;
         
-        fetch("http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=-26.30,-48.85&days=5&aqi=no&alerts=no")
+        fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${latitude},${longitude}.85&days=5&aqi=no&alerts=no`)
         .then(response => response.json()) 
         .then(data => {
             console.log("data > ",data);
@@ -73,6 +73,7 @@
                     
         //https://www.weatherapi.com/api-explorer.aspx#forecast
         // key1= 870ea7f706f34eaf986213002221908
+        // -26.30,-48.85
         
         
         // Query parameter based on which data is sent back. It could be following:
@@ -86,7 +87,6 @@
         // auto:ip IP lookup e.g: q=auto:ip
         // IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1
         
-        // -26.30,-48.85
         
         </script>
 
