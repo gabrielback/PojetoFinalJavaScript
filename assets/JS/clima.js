@@ -16,26 +16,49 @@
             
             
             const forecastObj = data.forecast.forecastday
-            let html = ""
 
-            funcao01(forecastObj)
+            let html = "";
+            forecastObj.forEach(element => {
+                html +=`<div class="card" style="width: 18rem;">
+                <img src="${element.day.condition.icon}"
+                class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Day: ${element.date}</p>
+                    <p class="card-text">Max: ${element.day.maxtemp_c}<span>&#8451;</span> Min: ${element.day.mintemp_c}<span>&#8451;</span></p>
+
+                    <p class="card-text">Comment:${element.day.condition.text}</p>
+                </div>
+              </div>`
+
+
+            });
+            
+            
 
             divHoje.innerHTML = html
             
-            
-            
         })
         
-        async function funcao01(dados){
+        const sleep = async timeInMs => setTimeout(() => {
+            console.log(`I'm here ${timeInMs/1000} Secs later...`)
+        }, timeInMs);
 
-             await dados.forEach( element => {
-                 console.log(element)
-                return`
-                Date: ${element.date}
-                Min: ${element.day.mintemp_c}C 
-                Max: ${element.day.maxtemp_c}C \n
-                ${element.day.condition.text}\n
-                ${element.day.condition.icon}` 
-            });
-            
-        }
+        async function funcao01(dados){
+            let dadoProcessado = ""
+                await dados.forEach( element => {
+                      dadoProcessado +=`<div class="card" style="width: 18rem;">
+                            <img src="${element.day.condition.icon}"
+                            class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Day: ${element.date}</p>
+                                <p class="card-text">Min: ${element.day.mintemp_c}</p>
+                                <p class="card-text">Max: ${element.day.maxtemp_c}</p>
+                                <p class="card-text">Max: ${element.day.condition.text}</p>
+                            </div>
+                          </div>`
+
+
+                    });
+                    return dadoProcessado
+                    
+                }
