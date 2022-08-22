@@ -13,14 +13,13 @@ fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf9862130022
     .then(data => {
         if(divHoje){
             divHoje.innerHTML = `
-            <div class="card"">
-                    <img src="${data.current.condition.icon}"
-                    class="card-img-top" alt="...">
-                    <div class="card-body">
+            <div>
+                <img src="${data.current.condition.icon}">
+                    <div>
                         <p>Temperature: ${data.location.name}, ${data.location.region},${data.location.country}</p>
-                        <p class="card-text">Current: ${data.current.temp_c}<span>&#8451;</span></p>
+                        <p>Current: ${data.current.temp_c}<span>&#8451;</span></p>
     
-                        <p class="card-text">Comment: ${data.current.condition.text}</p>
+                        <p>Comment: ${data.current.condition.text}</p>
                     </div>
                   </div>`
         }
@@ -30,13 +29,12 @@ fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf9862130022
         let htmlSemana = "";
         weekList.forEach(element => {
             htmlSemana += `
-            <div class="card">
-                <img src="${element.day.condition.icon}"
-                class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Day: ${element.date}</p>
-                    <p class="card-text">Min: ${element.day.mintemp_c}<span>&#8451;</span> Max: ${element.day.maxtemp_c}<span>&#8451;</span> </p>
-                    <p class="card-text">Comment:${element.day.condition.text}</p>
+            <div>
+                <img src="${element.day.condition.icon}">
+                <div>
+                    <p>Day: ${element.date}</p>
+                    <p>Min: ${element.day.mintemp_c}<span>&#8451;</span> Max: ${element.day.maxtemp_c}<span>&#8451;</span> </p>
+                    <p>Comment:${element.day.condition.text}</p>
                 </div>
             </div>`
         });
