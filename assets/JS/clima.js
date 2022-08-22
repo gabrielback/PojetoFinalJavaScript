@@ -11,19 +11,19 @@ const divHoje = document.getElementById("hoje")
 fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${latitude},${longitude}&days=5&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(data => {
-
-        divHoje.innerHTML = `
-        <div class="card"">
-                <img src="${data.current.condition.icon}"
-                class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p>Temperature: ${data.location.name}, ${data.location.region},${data.location.country}</p>
-                    <p class="card-text">Current: ${data.current.temp_c}<span>&#8451;</span></p>
-
-                    <p class="card-text">Comment: ${data.current.condition.text}</p>
-                </div>
-              </div>`
-
+        if(divHoje){
+            divHoje.innerHTML = `
+            <div class="card"">
+                    <img src="${data.current.condition.icon}"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p>Temperature: ${data.location.name}, ${data.location.region},${data.location.country}</p>
+                        <p class="card-text">Current: ${data.current.temp_c}<span>&#8451;</span></p>
+    
+                        <p class="card-text">Comment: ${data.current.condition.text}</p>
+                    </div>
+                  </div>`
+        }
 
         const weekList = data.forecast.forecastday
 
