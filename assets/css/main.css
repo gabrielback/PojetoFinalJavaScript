@@ -1,3 +1,7 @@
+*{
+  margin: 0px;
+}
+
 .cabecalho nav ul {
     margin: 0;
     padding: 0;
