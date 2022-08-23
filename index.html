@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="stylesheet" href="/assets/css/animations.css">
 
-        <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+
+    <title>Document</title>
+</head>
+
 <body>
 
-    
+
     <div class="content">
         <h1> Consulta CEP</h1>
         <div class="cepApi">
@@ -20,40 +22,44 @@
     </div>
 
     <script src="./assets/js/cepApi.js"></script>
-</head>
-<body>
-    <header class="cabecalho">
-        <nav>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="">Consulta de Cep</a></li>
-                <li><a href="">Clima</a></li>
-                <li><a href="">Sobre</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div id="cep"></div>
-    
-    <div class="slide-bl" id="semana" style="width: 300px; display: flex;"></div>
-    
-    <div class="slide-bl" id="hoje"></div>
-    
-    <div class="Conteudo">
-        <div class="consulta">
-            <button type="button" onclick="">
-                Checar clima em sua região
-            </button>
-        </div>
-    </div>
+    </head>
 
-    <footer>
-        <div class="footer">
-        <li><a href="Index.html">Home</a></li>
-        <li>Contato: +XX (xx)Xxxxx-xxxx</li>
+    <body>
+        <header class="cabecalho">
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="">Consulta de Cep</a></li>
+                    <li><a href="">Clima</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="cep"></div>
+
+        <div id="dias" style="display: flex; margin-bottom: 1%;">
+            <div class="slide-bl" id="hoje"></div>
+
+            <div class="slide-bl" id="semana" style="display: flex;"></div>
         </div>
-    </footer>
-    <script src="assets/JS/clima.js"></script>
-    <script src="assets/JS/viaCepAPI.js"></script>
-</body>
+
+        <div class="Conteudo">
+            <div class="consulta">
+                <button type="button" onclick="">
+                    Checar clima em sua região
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <li><a href="Index.html">Home</a></li>
+                <li>Contato: +XX (xx)Xxxxx-xxxx</li>
+            </div>
+        </footer>
+        <script src="assets/JS/clima.js"></script>
+        <script src="assets/JS/viaCepAPI.js"></script>
+    </body>
+
 </html>
