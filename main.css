@@ -1,0 +1,65 @@
+.cabecalho nav ul {
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  background-color: #333;
+  list-style-type: none;
+}
+
+nav {
+  position: sticky;
+  top: 0%;
+}
+
+li {
+  float: left;
+  margin-right: 16%;
+
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 10px 7px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+
+nav>ul a:hover {
+  background-color: white;
+  color: black;
+  transition: 0.9s;
+  border-radius: 20px 0px;
+}
+
+.footer {
+  list-style-type: none;
+  margin: 0;
+  background-color: #333;
+  color: rgb(44, 44, 44);
+}
+
+#semana>div {
+  border-radius: 10px;
+  padding: 2%;
+  color: aliceblue;
+  background-color: #333;
+  margin-left: 1%;
+  max-width: fit-content;
+  min-width: 25%;
+}
+
+#hoje>div {
+  border-radius: 10px;
+  padding: 2%;
+  margin-right: 0%;
+  color: aliceblue;
+  background-color: #333;
+  height: 86.9%;
+  max-width: 96%;
+}
+
+.slide-bl {
+  min-width: 40%;
+}
