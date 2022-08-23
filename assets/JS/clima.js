@@ -1,3 +1,6 @@
+const bgImage = document.getElementById("background-image")
+bgImage.style = `background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+       height: 100vh`
 const divSemana = document.getElementById("semana");
 const divHoje = document.getElementById("hoje")
 const divCep = document.getElementById("cep")
@@ -14,9 +17,10 @@ function latLong(){
 
 latLong();
 
+
 function teste(lat, long){
     
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${lat},${long}&days=5&aqi=no&alerts=no`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=bddac26d1801422f8e8161726222308&q=${lat},${long}&days=5&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(data => {
         console.log(data)

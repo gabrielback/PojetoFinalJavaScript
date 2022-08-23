@@ -12,54 +12,55 @@
 </head>
 
 <body>
+    <div id="background-image">
 
+<div class="content">
+    <h1> Consulta CEP</h1>
+    <div class="cepApi">
+        
+    </div>
+</div>
 
-    <div class="content">
-        <h1> Consulta CEP</h1>
-        <div class="cepApi">
+<script src="./assets/js/cepApi.js"></script>
+</head>
 
+<body>
+    <header class="cabecalho">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="">Consulta de Cep</a></li>
+                <li><a href="">Clima</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="cep"></div>
+    
+    <div id="dias" style="display: flex; margin-bottom: 1%;">
+        <div class="slide-bl" id="hoje"></div>
+        
+        <div class="slide-bl" id="semana" style="display: flex;"></div>
+    </div>
+    
+    <div class="Conteudo">
+        <div class="consulta">
+            <button type="button" onclick="">
+                Checar clima em sua região
+            </button>
         </div>
     </div>
-
-    <script src="./assets/js/cepApi.js"></script>
-    </head>
-
-    <body>
-        <header class="cabecalho">
-            <nav>
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="">Consulta de Cep</a></li>
-                    <li><a href="">Clima</a></li>
-                    <li><a href="">Sobre</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div id="cep"></div>
-
-        <div id="dias" style="display: flex; margin-bottom: 1%;">
-            <div class="slide-bl" id="hoje"></div>
-
-            <div class="slide-bl" id="semana" style="display: flex;"></div>
+    
+    <footer>
+        <div class="footer">
+            <li><a href="Index.html">Home</a></li>
+            <li>Contato: +XX (xx)Xxxxx-xxxx</li>
         </div>
-
-        <div class="Conteudo">
-            <div class="consulta">
-                <button type="button" onclick="">
-                    Checar clima em sua região
-                </button>
-            </div>
-        </div>
-
-        <footer>
-            <div class="footer">
-                <li><a href="Index.html">Home</a></li>
-                <li>Contato: +XX (xx)Xxxxx-xxxx</li>
-            </div>
-        </footer>
-        <script src="assets/JS/clima.js"></script>
-        <script src="assets/JS/viaCepAPI.js"></script>
-    </body>
+    </footer>
+    <script src="assets/JS/clima.js"></script>
+    <script src="assets/JS/viaCepAPI.js"></script>
+</div>
+</body>
 
 </html>
