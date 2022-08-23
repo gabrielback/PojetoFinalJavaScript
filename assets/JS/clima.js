@@ -1,5 +1,6 @@
 const divSemana = document.getElementById("semana");
 const divHoje = document.getElementById("hoje")
+const divCep = document.getElementById("cep")
 
 function posicao (position) {
     let lat = position.coords.latitude;
@@ -15,11 +16,12 @@ latLong();
 
 function teste(lat, long){
     
-fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${lat},${long}&days=5&aqi=no&alerts=no`)
-.then(response => response.json())
-.then(data => {
-    console.log(data)
-    if(divHoje){
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf986213002221908&q=${lat},${long}&days=5&aqi=no&alerts=no`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        divCep.innerHTML += `<h1>Previsão do tempo em ${data.location.name}</h1>`
+        if(divHoje){
         divHoje.innerHTML = `
         <div>
             <img src="${data.current.condition.icon}">
@@ -54,3 +56,5 @@ fetch(`http://api.weatherapi.com/v1/forecast.json?key=870ea7f706f34eaf9862130022
 
 }
 
+const data = new Date()
+console.log(data)
