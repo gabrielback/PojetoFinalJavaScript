@@ -24,7 +24,7 @@ function teste(lat, long){
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        divCep.innerHTML += `<h1>Previsão do tempo em ${data.location.name}</h1>`
+        divCep.innerHTML += `<h1 class="titulo">Previsão do tempo em ${data.location.name}</h1>`
         if(divHoje){
         divHoje.innerHTML = `
         <div>
@@ -48,7 +48,7 @@ function teste(lat, long){
             <div>
                 <p>Day: ${element.date}</p>
                 <p>Min: ${element.day.mintemp_c}<span>&#8451;</span> Max: ${element.day.maxtemp_c}<span>&#8451;</span> </p>
-                <p>Comment:${element.day.condition.text}</p>
+                <p>Comment: ${element.day.condition.text}</p>
             </div>
         </div>`
     });
