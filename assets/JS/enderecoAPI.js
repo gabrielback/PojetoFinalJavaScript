@@ -3,6 +3,7 @@ let elementoCEP = document.getElementById("cep")
 
 
 
+
 const checarEnd = () => {
     
     
@@ -15,7 +16,7 @@ const checarEnd = () => {
     document.getElementById('userlogradouro').innerHTML = `<p> ${data.logradouro}</p>`;
     document.getElementById('userbairro').innerHTML = `Bairro ${data.bairro} </p>` ;
     document.getElementById('usercidadeuf').innerHTML = `<p>Cidade de ${data.localidade} - ${data.uf} </p>`
-        
+    document.getElementById('container').style.backgroundColor = "#2e2e2e" ;
     })
     
   }

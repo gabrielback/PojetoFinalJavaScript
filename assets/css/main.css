@@ -6,7 +6,7 @@ body{
   min-width: fit-content;
 }
 
-.cabecalho nav ul {
+/* .cabecalho nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -45,7 +45,7 @@ nav {
     margin: 0;
     background-color: #333;
     color: rgb(44, 44, 44);
-}
+} */
 
 #semana > div{
   border-radius: 10px;
