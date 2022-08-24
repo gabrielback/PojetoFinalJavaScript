@@ -1,5 +1,9 @@
 *{
   margin: 0px;
+  
+}
+body{
+  min-width: fit-content;
 }
 
 .cabecalho nav ul {
@@ -44,12 +48,15 @@ nav {
 }
 
 #semana > div{
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   color: aliceblue;
   background-color: #333;
   margin: 2px;
   width: fit-content;
+  min-width: 200px;
+  min-block-size: 0%;
+  left: auto;
 }
 
 #hoje > div {
@@ -59,4 +66,17 @@ nav {
   background-color: #333;
   margin: 2px;
   width: fit-content;
+  min-width: 200px;
+  left: auto;
+
 }
+
+.titulo{
+  margin-top: 1.8%;
+  margin-bottom: 1.8%;
+}
+
+
+
+
+
