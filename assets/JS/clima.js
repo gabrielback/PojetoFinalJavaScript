@@ -54,8 +54,6 @@ function teste(lat, long){
     });
 
     divSemana.innerHTML = htmlSemana
-    // divHoje.innerHTML = html
-
 })
 
 }
