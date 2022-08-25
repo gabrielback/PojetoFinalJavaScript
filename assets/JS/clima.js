@@ -1,30 +1,30 @@
 const bgImage = document.getElementById("background-image")
-bgImage.style = `background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-       height: 100vh`
+bgImage.style = `background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); height: 100vh`
+
 const divSemana = document.getElementById("semana");
 const divHoje = document.getElementById("hoje")
 const divCep = document.getElementById("cep")
 
-function posicao (position) {
+const getLocation = (position) => {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
-    teste(lat, long)
+    return showWeatherCards(lat, long)
 }
 
-function latLong(){
-    navigator.geolocation.getCurrentPosition(posicao);
-}
+const getLatLongPosition = () => navigator.geolocation.getCurrentPosition(getLocation);
 
-latLong();
+getLatLongPosition();
 
 
-function teste(lat, long){
+const showWeatherCards = (lat, long) => {
     
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=bddac26d1801422f8e8161726222308&q=${lat},${long}&days=5&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        const weekList = data.forecast.forecastday
+
         divCep.innerHTML += `<h1 class="titulo">Previsão do tempo em ${data.location.name}</h1>`
+        console.log(data)
         if(divHoje){
         divHoje.innerHTML = `
         <div>
@@ -32,13 +32,10 @@ function teste(lat, long){
                 <div>
                     <p>Temperature: ${data.location.name}, ${data.location.region},${data.location.country}</p>
                     <p>Current: ${data.current.temp_c}<span>&#8451;</span></p>
-
                     <p>Comment: ${data.current.condition.text}</p>
                 </div>
               </div>`
     }
-
-    const weekList = data.forecast.forecastday
 
     let htmlSemana = "";
     weekList.forEach(element => {
@@ -57,6 +54,3 @@ function teste(lat, long){
 })
 
 }
-
-const data = new Date()
-console.log(data)
